@@ -1,13 +1,20 @@
 const mongoose = require("mongoose");
 
-const connectDB = () => {
-  mongoose.connect(
-    `mongodb+srv://fassih123:fassih123@devconnector.bcnhw.mongodb.net/<dbname>?retryWrites=true&w=majority`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  );
-  mongoose.connection.once("open", () => {
+const connectDB = async () => {
+  try {
+    await mongoose.connect(
+      `mongodb+srv://fassih123:fassih123@devconnector.bcnhw.mongodb.net/graphql?retryWrites=true&w=majority&ssl=true`,
+      {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+      }
+    );
     console.log("Connected to Database");
-  });
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 module.exports = connectDB;
