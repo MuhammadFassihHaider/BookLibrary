@@ -17,4 +17,6 @@ export interface BookFormType {
 export interface AuthorType {
   id: number;
   name: string;
+  age: string;
+  book: BookFormType[];
 }

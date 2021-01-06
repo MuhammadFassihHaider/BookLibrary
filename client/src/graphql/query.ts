@@ -30,6 +30,11 @@ const GET_AUTHORS = gql`
     authors {
       id
       name
+      age
+      book {
+        name
+        genre
+      }
     }
   }
 `;

@@ -56,7 +56,10 @@ const AddBook: React.FC<AddBookProps> = ({}) => {
           value={form.genre}
           name="genre"
         />
-        <select onChange={(e) => onChangeHandler(e)} className="mb-10">
+        <select
+          name="authorId"
+          onChange={(e) => onChangeHandler(e)}
+          className="mb-10  bg-gray-200 w-48 h-10 rounded p-3 my-2 text-gray-500">
           {authors.map((author) => {
             return (
               <option value={author.id} key={author.id}>
