@@ -1,0 +1,21 @@
+import React from "react";
+import Books from "../components/Books";
+import Navigation from "../components/Navigation";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AddAuthor from "./AddAuthor";
+import AddBook from "./AddBook";
+interface DashboardProps {}
+
+const Dashboard: React.FC<DashboardProps> = () => {
+  return (
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route exact path="/" component={Books} />
+        <Route exact path="/addAuthor" component={AddAuthor} />
+        <Route exact path="/addBook" component={AddBook} />
+      </Switch>
+    </Router>
+  );
+};
+export default Dashboard;
