@@ -27,13 +27,13 @@ const AddAuthor: React.FC<AddAuthorProps> = ({}) => {
   };
 
   return (
-    <div className="mx-4 mt-8">
+    <div className="mx-4 mt-8 flex flex-col">
       <p className="text-xl text-gray-600 font-bold">Add Author</p>
-      <div className="flex flex-col items-center mt-4">
+      <div className="flex flex-col mt-4 md:flex-row">
         <input
           type="text"
           placeholder="Name"
-          className="h-12 bg-gray-200 rounded p-3 my-2 w-full text-gray-500"
+          className="h-12 bg-gray-200 rounded p-3 my-2 w-full text-gray-500 md:mr-2"
           onChange={(e) => onChangeHandler(e)}
           value={form.name}
           name="name"
@@ -41,15 +41,15 @@ const AddAuthor: React.FC<AddAuthorProps> = ({}) => {
         <input
           type="text"
           placeholder="Age"
-          className="h-12 bg-gray-200 rounded p-3 my-2 mb-10 w-full text-gray-500"
+          className="h-12 bg-gray-200 rounded p-3 my-2 mb-10 w-full text-gray-500 md:mr-2"
           onChange={(e) => onChangeHandler(e)}
           value={form.age}
           name="age"
         />
-        <span onClick={(e) => onClickHandler(e)}>
-          <Button inputText="Add" isLink={false} />
-        </span>
       </div>
+      <span onClick={(e) => onClickHandler(e)} className="text-center w-24 self-center">
+        <Button inputText="Add" isLink={false} />
+      </span>
     </div>
   );
 };

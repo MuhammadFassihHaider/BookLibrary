@@ -14,7 +14,7 @@ const Authors: React.FC<AuthorsProps> = ({}) => {
     console.log(allAuthors?.authors);
   }, [allAuthors, loading]);
   return (
-    <div>
+    <div className="my-8 w-full grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {authors.length && authors ? (
         authors.map((author) => {
           return <Author age={author.age} book={author.book} id={author.id} name={author.name} />;

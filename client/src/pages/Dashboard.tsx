@@ -1,7 +1,7 @@
 import React from "react";
 import Books from "../components/Books";
 import Navigation from "../components/Navigation";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AddAuthor from "./AddAuthor";
 import AddBook from "./AddBook";
 import Authors from "../components/Authors";

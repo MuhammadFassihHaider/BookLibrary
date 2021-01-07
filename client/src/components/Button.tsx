@@ -11,14 +11,14 @@ const Button: React.FC<ButtonProps> = ({ inputText, to, isLink }) => {
     <>
       {isLink ? (
         <Link to={`${to}`}>
-          <a className="px-4 py-3 bg-gray-500 rounded-lg shadow text-lg text-gray-200 cursor-pointer  hover:bg-gray-500 hover:shadow-md">
+          <p className="px-4 py-3 bg-gray-500 rounded-lg shadow text-lg text-gray-200 cursor-pointer  hover:bg-gray-500 hover:shadow-md mr-2 mb-2 w-36 text-center">
             {inputText}
-          </a>
+          </p>
         </Link>
       ) : (
-        <a className="px-4 py-3 bg-gray-500 rounded-lg shadow text-lg text-gray-200 cursor-pointer  hover:bg-gray-500 hover:shadow-md">
+        <p className="px-4 py-3 bg-gray-500 rounded-lg shadow text-lg text-gray-200 cursor-pointer hover:bg-gray-500 hover:shadow-md">
           {inputText}
-        </a>
+        </p>
       )}
     </>
   );
