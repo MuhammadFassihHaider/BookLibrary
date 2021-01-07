@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
+    // Add MongoDB link
     await mongoose.connect(
-      `mongodb+srv://fassih123:fassih123@devconnector.bcnhw.mongodb.net/graphql?retryWrites=true&w=majority`,
+      ``,
       {
         useNewUrlParser: true,
         useCreateIndex: true,
